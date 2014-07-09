@@ -4,7 +4,7 @@ public class Aluno {
 	private String matricula;
 	private double multa;
 	private boolean temMulta;
-	private ArrayList<Livros> listaDeLivrosDoAluno= new ArrayList<Livros> () ;
+	private ArrayList<Livro> listaDeLivrosDoAluno= new ArrayList<Livro> () ;
 	
 	/*construtor padrão*/
 	public Aluno(){
@@ -22,14 +22,14 @@ public class Aluno {
 		setMulta(multa);
 	}
 	/*construtor passando só nome, matricula, valor da multa e um livro*/
-	public Aluno(String nome, String matricula, double multa, Livros livro1){
+	public Aluno(String nome, String matricula, double multa, Livro livro1){
 		setNome(nome);
 		setMatricula(matricula);
 		setMulta(multa);
-		adicionarLivro(Livros livro1);
+		adicionarLivro(livro1);
 	}
 	/*construtor passando só nome, matricula, valor da multa e dois livros*/
-	public Aluno(String nome, String matricula, double multa, Livros livro1, Livros livro2){
+	public Aluno(String nome, String matricula, double multa, Livro livro1, Livro livro2){
 		setNome(nome);
 		setMatricula(matricula);
 		setMulta(multa);
@@ -37,7 +37,7 @@ public class Aluno {
 		adicionarLivro(livro2);
 	}
 	/*construtor passando só nome, matricula, valor da multa e três livros*/
-	public Aluno(String nome, String matricula, double multa, Livros livro1, Livros livro2, Livros livro3){
+	public Aluno(String nome, String matricula, double multa, Livro livro1, Livro livro2, Livro livro3){
 		setNome(nome);
 		setMatricula(matricula);
 		setMulta(multa);
@@ -76,12 +76,12 @@ public class Aluno {
 	/*metodos*/
 	
 	/*adicionar livro na lista ali em cima*/
-	public void adicionarLivro(Livros livro){
+	public void adicionarLivro(Livro livro){
 		this.listaDeLivrosDoAluno.add(livro);
 	}
 	
 	/*retorna qual o livro da posição que vc informar*/
-	public Livros livroNaPosicaoEh(int posicao){
+	public Livro livroNaPosicaoEh(int posicao){
 		return this.listaDeLivrosDoAluno.get(posicao);
 	}
 	/*remove o livro da posição que vc informar*/
