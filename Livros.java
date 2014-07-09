@@ -2,10 +2,32 @@
 public class Livros {
 	private String titulo;
 	private String autor;
-	private String anoDePublicação;
+	private String anoDePublicacao;
 	private String editora;
 	private String isbn;
-	private boolean estaDisponivel;
+	private boolean Disponivel=true;
+	/**/
+	/*construtor padrão*/
+	public Livros(){
+		setTitulo("Titulo padrão");
+		setAutor("Autor padrão");
+		setAnoDePublicacao("Ano de publicação");
+		setEditora("Editora padrão");
+		setIsbn("000-000-0");
+		setDisponivel(false);
+	}
+	
+	/*construtor passando os valores*/
+	public Livros(String titulo,String autor, String anoDePublicacao, String editora, String isbn){
+		setTitulo(titulo);
+		setAutor(autor);
+		setAnoDePublicacao(anoDePublicacao);
+		setEditora(editora);
+		setIsbn(isbn);
+		setDisponivel(false);
+	}
+	/*metodos*/
+	
 	public String getTitulo() {
 		return titulo;
 	}
@@ -17,12 +39,6 @@ public class Livros {
 	}
 	public void setAutor(String autor) {
 		this.autor = autor;
-	}
-	public String getAnoDePublicação() {
-		return anoDePublicação;
-	}
-	public void setAnoDePublicação(String anoDePublicação) {
-		this.anoDePublicação = anoDePublicação;
 	}
 	public String getEditora() {
 		return editora;
@@ -36,10 +52,16 @@ public class Livros {
 	public void setIsbn(String isbn) {
 		this.isbn = isbn;
 	}
-	public boolean isEstaDisponivel() {
-		return estaDisponivel;
+	public boolean isDisponivel() {
+		return Disponivel;
 	}
-	public void setEstaDisponivel(boolean estaDisponivel) {
-		this.estaDisponivel = estaDisponivel;
+	public void setDisponivel(boolean estaDisponivel) {
+		this.Disponivel = estaDisponivel;
+	}
+	public String getAnoDePublicacao() {
+		return anoDePublicacao;
+	}
+	public void setAnoDePublicacao(String anoDePublicacao) {
+		this.anoDePublicacao = anoDePublicacao;
 	}
 }
