@@ -1,3 +1,5 @@
+import java.util.Calendar;
+import java.util.Date;
 
 public class Livro {
 	private String titulo;
@@ -6,6 +8,15 @@ public class Livro {
 	private String editora;
 	private String isbn;
 	private boolean Disponivel=true;
+	/*adicionei esses trÊs atributos pra o calculo da multa
+	 * e pra verificar quantos dias o livro tá emprestado
+	 * e pra caso queiram adicionar a data de cadastro do livro
+	 * na biblioteca.
+	 * */
+	private Date dataDeDevolucao;
+	private Date dataDeEmprestimo;
+	private Date dataDeCadastroDoLivroNaBiblioteca;
+	
 	/**/
 	/*construtor padrão*/
 	public Livro(){
@@ -26,7 +37,7 @@ public class Livro {
 		setIsbn(isbn);
 		setDisponivel(true);
 	}
-	/*metodos*/
+	/*metodos get e sets*/
 	
 	public String getTitulo() {
 		return titulo;
@@ -63,6 +74,30 @@ public class Livro {
 	}
 	public void setAnoDePublicacao(String anoDePublicacao) {
 		this.anoDePublicacao = anoDePublicacao;
+	}
+	private Date getDataDeDevolucao() {
+		return dataDeDevolucao;
+	}
+
+	private void setDataDeDevolucao(Date dataDeDevolucao) {
+		this.dataDeDevolucao = dataDeDevolucao;
+	}
+
+	private Date getDataDeEmprestimo() {
+		return dataDeEmprestimo;
+	}
+
+	private void setDataDeEmprestimo(Date dataDeEmprestimo) {
+		this.dataDeEmprestimo = dataDeEmprestimo;
+	}
+
+	private Date getDataDeCadastroDoLivroNaBiblioteca() {
+		return dataDeCadastroDoLivroNaBiblioteca;
+	}
+
+	private void setDataDeCadastroDoLivroNaBiblioteca(
+			Date dataDeCadastroDoLivroNaBiblioteca) {
+		this.dataDeCadastroDoLivroNaBiblioteca = dataDeCadastroDoLivroNaBiblioteca;
 	}
 
 	@Override
@@ -124,5 +159,9 @@ public class Livro {
 			return false;
 		return true;
 	}
+
+	
+	
+	
 	
 }
