@@ -3,6 +3,8 @@ public class Endereço {
 	private String rua;
 	private String bairro;
 	private String cidade;
+	private String estado;
+	
 	public String getRua() {
 		return rua;
 	}
@@ -20,5 +22,13 @@ public class Endereço {
 	}
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
+	}
+	
+	public String getEstado() {
+		return estado;
+	}
+	
+	public void setEstado(String estado) {
+		this.estado = estado;
 	}
 }
