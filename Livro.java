@@ -4,9 +4,12 @@ import java.util.Date;
 public class Livro {
 	private String titulo;
 	private String autor;
-	private String anoDePublicacao;
+	private String ano;
 	private String editora;
 	private String isbn;
+	private String codigo;
+	
+	
 	private boolean Disponivel=true;
 	/*adicionei esses trÊs atributos pra o calculo da multa
 	 * e pra verificar quantos dias o livro tá emprestado
@@ -29,10 +32,10 @@ public class Livro {
 	}
 	
 	/*construtor passando os valores*/
-	public Livro(String titulo,String autor, String anoDePublicacao, String editora, String isbn){
+	public Livro(String titulo,String autor, String ano, String editora, String isbn){
 		setTitulo(titulo);
 		setAutor(autor);
-		setAnoDePublicacao(anoDePublicacao);
+		setAnoDePublicacao(ano);
 		setEditora(editora);
 		setIsbn(isbn);
 		setDisponivel(true);
@@ -70,10 +73,10 @@ public class Livro {
 		this.Disponivel = estaDisponivel;
 	}
 	public String getAnoDePublicacao() {
-		return anoDePublicacao;
+		return ano;
 	}
-	public void setAnoDePublicacao(String anoDePublicacao) {
-		this.anoDePublicacao = anoDePublicacao;
+	public void setAnoDePublicacao(String ano) {
+		this.ano = ano;
 	}
 	private Date getDataDeDevolucao() {
 		return dataDeDevolucao;
@@ -99,11 +102,18 @@ public class Livro {
 			Date dataDeCadastroDoLivroNaBiblioteca) {
 		this.dataDeCadastroDoLivroNaBiblioteca = dataDeCadastroDoLivroNaBiblioteca;
 	}
+	
+	ublic String getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
 
 	@Override
 	public String toString() {
 		return "Livro [titulo=" + titulo + ", autor=" + autor
-				+ ", anoDePublicacao=" + anoDePublicacao + ", editora="
+				+ ", anoDePublicacao=" + ano + ", editora="
 				+ editora + ", isbn=" + isbn + "]";
 	}
 
@@ -113,7 +123,7 @@ public class Livro {
 		int result = 1;
 		result = prime * result + (Disponivel ? 1231 : 1237);
 		result = prime * result
-				+ ((anoDePublicacao == null) ? 0 : anoDePublicacao.hashCode());
+				+ ((ano == null) ? 0 : ano.hashCode());
 		result = prime * result + ((autor == null) ? 0 : autor.hashCode());
 		result = prime * result + ((editora == null) ? 0 : editora.hashCode());
 		result = prime * result + ((isbn == null) ? 0 : isbn.hashCode());
@@ -132,10 +142,10 @@ public class Livro {
 		Livro other = (Livro) obj;
 		if (Disponivel != other.Disponivel)
 			return false;
-		if (anoDePublicacao == null) {
-			if (other.anoDePublicacao != null)
+		if (ano == null) {
+			if (other.ano != null)
 				return false;
-		} else if (!anoDePublicacao.equals(other.anoDePublicacao))
+		} else if (!ano.equals(other.ano))
 			return false;
 		if (autor == null) {
 			if (other.autor != null)
