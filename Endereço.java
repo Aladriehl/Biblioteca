@@ -1,3 +1,5 @@
+package com.biblioteca;
+
 
 public class Endereço {
 	private String rua;
