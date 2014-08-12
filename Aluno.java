@@ -1,33 +1,30 @@
-public class Aluno extends Usuario{
+package com.biblioteca;
 
-	private int matricula;
-	private Usuario usario;
-	
+public class Aluno extends Usuario {
 
-	public Aluno(DadosPessoal dados, Endereco end, int matricula) {
-		super(dados, end);
-		
-		this.matricula = matricula;
-	}
+    private int matricula;
+    private Usuario usario;
 
-	public int getMatricula() {
-		return matricula;
-	}
+    public Aluno(DadosPessoal dados, Endereco end, int matricula) {
+        super(dados, end);
 
-	public void setMatricula(int matricula) {
-		this.matricula = matricula;
-	}
+        this.matricula = matricula;
+    }
 
-	public Usuario getUsario() {
-		return usario;
-	}
+    public int getMatricula() {
+        return matricula;
+    }
 
-	public void setUsario(Usuario usario) {
-		this.usario = usario;
-	}
+    public void setMatricula(int matricula) {
+        this.matricula = matricula;
+    }
 
-	
-	
-	
+    public Usuario getUsario() {
+        return usario;
+    }
+
+    public void setUsario(Usuario usario) {
+        this.usario = usario;
+    }
 
 }
